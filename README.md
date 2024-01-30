@@ -36,7 +36,7 @@
 Выполните команду ```terraform validate```. Объясните, в чём заключаются намеренно допущенные ошибки. Исправьте их. - декларация ресурса должна состоять из двух блоков: это тип ресурса и имя ресурса, имя ресурса должно начинаться с буквенного символа. Исправленны опечатки в слове 1nginx, убрано лишнее слово FAKE из слова random.string_FAKE и испавленна опечатка в слове resulT.
 5. Выполните код. В качестве ответа приложите: исправленный фрагмент кода и вывод команды ```docker ps```.
 
-\```
+```
 resource "docker_image" "nginx"{
   name         = "nginx:latest"
   keep_locally = true
@@ -52,7 +52,7 @@ resource "docker_container" "nginx" {
   }
 }
 
-\```
+```
 
 ![alt text](https://github.com/dsolovev455/hw-01/blob/main/img/2.png)
 
@@ -63,7 +63,7 @@ resource "docker_container" "nginx" {
 
 ![alt text](https://github.com/dsolovev455/hw-01/blob/main/img/3.png)
 
-\```
+```
 {
   "version": 4,
   "terraform_version": "1.5.0",
@@ -73,7 +73,7 @@ resource "docker_container" "nginx" {
   "resources": [],
   "check_results": null
 }
-\```
+```
 
 9. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ **обязательно** подкрепите строчкой из документации [**terraform провайдера docker**](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs).  (ищите в классификаторе resource docker_image )
 
